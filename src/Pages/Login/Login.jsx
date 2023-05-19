@@ -2,14 +2,27 @@ import { Link } from "react-router-dom";
 import { AuthContex } from "../Provider/AuthProvider";
 import { useContext } from "react";
 import { FaGoogle,} from 'react-icons/fa';
+import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import { app } from "../Firebase/firebase.config";
 
 
 const Login = () => {
 
     const {loginUser} =useContext(AuthContex)
 
+    const auth = getAuth(app);
+    const  googleProvider =new GoogleAuthProvider();
+
     const handelgooglBtn= ()=>{
-        
+        signInWithPopup(auth, googleProvider)
+        .then(result => {
+          const loginGoogle =result.user
+          console.log(loginGoogle)
+    
+        })
+        .catch(error =>{
+          alert(error.message)
+        })
     }
 
     const handelLogin= event =>{
