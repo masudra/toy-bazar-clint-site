@@ -5,9 +5,9 @@ import logo4 from '../../../../public/baner7.jpg'
 const Banner = () => {
     return (
         <div>
-            <div className="carousel w-full h-[1200px]  ">
+            <div className="carousel w-full h-[600px]   ">
                 {/* slider 1 */}
-                <div id="slide1" className="carousel-item relative w-full h-1/2">
+                <div id="slide1" className="carousel-item relative w-full ">
                     <img src={logo1} className="w-full" />
                     <div className="absolute  flex items-center h-full left-0  top-4 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
                         <div className='text-white space-y-7 ml-4 pl-12 w-1/2'>
@@ -22,7 +22,7 @@ const Banner = () => {
                     </div>
                 </div>
                 {/* slider 2*/}
-                <div id="slide2" className="carousel-item relative w-full h-1/2">
+                <div id="slide2" className="carousel-item relative w-full">
                     <img src={logo2} className="w-full" />
                     <div className="absolute  flex items-center h-full left-0 right-0 top-4 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
                         <div className='text-white space-y-7 ml-4 pl-12 w-1/2'>
@@ -37,7 +37,7 @@ const Banner = () => {
                     </div>
                 </div>
                 {/* slider 3*/}
-                <div id="slide3" className="carousel-item relative w-full h-1/2">
+                <div id="slide3" className="carousel-item relative w-full ">
                     <img src={logo3} className="w-full" />
                     <div className="absolute  flex items-center h-full left-0 right-0 top-4 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
                         <div className='text-white space-y-7 ml-4 pl-12 w-1/2'>
@@ -52,7 +52,7 @@ const Banner = () => {
                     </div>
                 </div>
                 {/* slider 4*/}
-                <div id="slide4" className="carousel-item relative w-full h-1/2">
+                <div id="slide4" className="carousel-item relative w-full ">
                     <img src={logo4} className="w-full" />
                     <div className="absolute  flex items-center h-full left-0 right-0 top-4 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
                         <div className='text-white space-y-7 ml-4 pl-12 w-1/2'>

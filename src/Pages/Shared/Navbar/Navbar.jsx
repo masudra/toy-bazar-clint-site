@@ -19,7 +19,7 @@ const Navbar = () => {
 
                             <li>
                                 <img className="w25 rounded" src="" alt="" />
-                                <button className="mx-4">Login</button>
+                                <Link to='/login'> <button className="mx-4">Login</button></Link>
                                 <button className="mx-4 mr-8">LogOut</button>
                             </li>
                         </ul>
@@ -43,8 +43,7 @@ const Navbar = () => {
                         </label>
                         <li className="ml-3 mr-10">
 
-                            <button className="mx-1">Login</button>
-                            <button className="mx-1">LogOut</button>
+                            <Link to='/login'> <button className="mx-4">Login</button></Link>                            <button className="mx-1">LogOut</button>
                         </li>
 
                     </ul>
