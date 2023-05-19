@@ -1,8 +1,13 @@
-
+import logo from '../../../../public/logo.png'
 const Footer = () => {
-    return (
-        <div>
-            <footer className="footer grid-rows-2 p-10 bg-neutral text-neutral-content">
+  return (
+    <div>
+      <footer className="footer p-10  bg-neutral text-base-content text-white">
+  <div className='mt-0'>
+    <img src={logo} alt="" />
+
+    <p>Toy Bazar ltd.<br/>Providing reliable toy 2000</p>
+  </div> 
   <div>
     <span className="footer-title">Services</span> 
     <a className="link link-hover">Branding</a> 
@@ -22,32 +27,11 @@ const Footer = () => {
     <a className="link link-hover">Terms of use</a> 
     <a className="link link-hover">Privacy policy</a> 
     <a className="link link-hover">Cookie policy</a>
-  </div> 
-  <div>
-    <span className="footer-title">Social</span> 
-    <a className="link link-hover">Twitter</a> 
-    <a className="link link-hover">Instagram</a> 
-    <a className="link link-hover">Facebook</a> 
-    <a className="link link-hover">Github</a>
-  </div> 
-  <div>
-    <span className="footer-title">Explore</span> 
-    <a className="link link-hover">Features</a> 
-    <a className="link link-hover">Enterprise</a> 
-    <a className="link link-hover">Security</a> 
-    <a className="link link-hover">Pricing</a>
-  </div> 
-  <div>
-    <span className="footer-title">Apps</span> 
-    <a className="link link-hover">Mac</a> 
-    <a className="link link-hover">Windows</a> 
-    <a className="link link-hover">iPhone</a> 
-    <a className="link link-hover">Android</a>
   </div>
 </footer>
-            
-        </div>
-    );
+      
+    </div>
+  );
 };
 
 export default Footer;
