@@ -12,16 +12,16 @@ const Login = () => {
           <label className="label">
             <span className="label-text">Email</span>
           </label>
-          <input type="text" placeholder="email" className="input input-bordered" />
+          <input type="email" placeholder="Enter Your Email" name="email" className="input input-bordered" />
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input type="text" placeholder="password" className="input input-bordered" />
+          <input type="password" placeholder="Enter Your Password" name="password" className="input input-bordered" />
           <label className="label">
            
-           <p> <span>You haven,t Acount Pless </span> <Link className="link-hover ml-10 text-xl text-blue-500" to='/regster'> Regster </Link></p> 
+           <p> <span>You don,t have an account </span> <Link className="link-hover ml-10 text-xl text-blue-500" to='/regster'> Regster </Link></p> 
           </label>
           
         </div>
