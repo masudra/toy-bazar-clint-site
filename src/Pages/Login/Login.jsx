@@ -1,13 +1,43 @@
 import { Link } from "react-router-dom";
+import { AuthContex } from "../Provider/AuthProvider";
+import { useContext } from "react";
+import { FaGoogle,} from 'react-icons/fa';
 
 
 const Login = () => {
+
+    const {loginUser} =useContext(AuthContex)
+
+    const handelgooglBtn= ()=>{
+        
+    }
+
+    const handelLogin= event =>{
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        const user = {email, password }
+        console.log(user)
+
+        loginUser(email,password)
+        .then(result =>{
+            const logUser = result.user
+            console.log(logUser)
+        })
+        .then(error=>{
+            alert(error.message)
+        })
+
+    }
+
     return (
         <div>
            <div className="hero min-h-screen bg-base-200 ">
   <div className="hero-content flex-col lg:flex-row-reverse w-full">
     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
       <div className="card-body">
+        <form onSubmit={handelLogin}>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>
@@ -27,10 +57,10 @@ const Login = () => {
         </div>
         <div className="form-control mt-6">
           <button className="btn btn-primary ">Login</button><br/>
-          <button className="btn btn-primary ">Login With Google</button>
+          <button onClick={handelgooglBtn} className="btn btn-primary "><FaGoogle className='me-2'/>Login With Google</button>
           
         </div>
-       
+        </form>
       </div>
     </div>
   </div>
