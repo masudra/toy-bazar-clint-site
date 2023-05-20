@@ -4,7 +4,7 @@ import { AuthContex } from "../Provider/AuthProvider";
 
 const Regster = () => {
 
-     const {creatUser}= useContext(AuthContex)
+     const {creatUser,updetuser}= useContext(AuthContex)
   
     const handelRegster = event => {
         event.preventDefault();
@@ -15,16 +15,26 @@ const Regster = () => {
         const password = form.password.value;
         const user = { name, photo, email, password }
         console.log(user)
+        
 
         creatUser(email,password)
         .then(result =>{
-            const logUser = result.user
-            console.log(logUser)
+            updetuser(name,photo)
+            .then(result =>{
+               const logUser = result.user
+               console.log(logUser)
+           })
+           .catch(error=>{
+               alert(error.message)
+           })
         })
-        .then(error=>{
+        .catch(error=>{
             alert(error.message)
         })
 
+       
+
+        
     }
     return (
         <div>

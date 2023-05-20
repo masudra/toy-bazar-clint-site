@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import logo from '../../../../public/logo.png'
+import { useContext } from "react";
+import { AuthContex } from "../../Provider/AuthProvider";
 const Navbar = () => {
+   const {user} = useContext(AuthContex)
     return (
         <div>
             <div className="navbar  bg-slate-100">
@@ -43,7 +46,9 @@ const Navbar = () => {
                         </label>
                         <li className="ml-3 mr-10">
 
-                            <Link to='/login'> <button className="mx-4">Login</button></Link>                            <button className="mx-1">LogOut</button>
+                            {user? <button className="mx-1">LogOut</button>:
+                                <Link to='/login'> <button className="mx-4">Login</button></Link>                           
+                            }
                         </li>
 
                     </ul>

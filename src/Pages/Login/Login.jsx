@@ -38,7 +38,7 @@ const Login = () => {
             const logUser = result.user
             console.log(logUser)
         })
-        .then(error=>{
+        .catch(error=>{
             alert(error.message)
         })
 

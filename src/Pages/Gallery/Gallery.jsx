@@ -8,7 +8,7 @@ import logo6 from '../../../public/hc21.jpg'
 
 const Gallery = () => {
     return (
-        <div className='grid lg:grid-cols-3 lg:ml-20 gap-10 mt-10  mb-10 '>
+        <div className='grid lg:grid-cols-3 lg:ml-20 gap-10 mt-10  mb-10  '>
             <div className="card w-[420px] h-[440px] bg-base-100 shadow-xl">
                 <figure><img src={logo1} alt="Shoes" /></figure>
                 <div className="card-body">
