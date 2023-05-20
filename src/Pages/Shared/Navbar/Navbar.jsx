@@ -3,7 +3,17 @@ import logo from '../../../../public/logo.png'
 import { useContext } from "react";
 import { AuthContex } from "../../Provider/AuthProvider";
 const Navbar = () => {
-   const {user} = useContext(AuthContex)
+    const { user, logout } = useContext(AuthContex)
+
+    const handellogoutBtn = () => {
+        logout()
+            .then(result => { })
+            .catch(error => {
+                alert(error.message)
+            })
+
+    }
+
     return (
         <div>
             <div className="navbar  bg-slate-100">
@@ -18,12 +28,12 @@ const Navbar = () => {
                             <li><Link to='/mytoy'>My Toys</Link></li>
                             <li><Link to='/addtoy'>Add A Toy</Link></li>
                             <li><Link to='/blog'>Blog</Link></li>
-                            <img className="w-10 rounded-full" src="../../../../public/245382285_1084955178910889_2518374623584841612_n.jpg" />
+                            <img className="w-10 rounded-full" src={user?.photoURL
+                            } />
 
                             <li>
-                                <img className="w25 rounded" src="" alt="" />
-                                <Link to='/login'> <button className="mx-4">Login</button></Link>
-                                <button className="mx-4 mr-8">LogOut</button>
+                                {user ?<button onClick={handellogoutBtn} className="mx-4 mr-8">LogOut</button>: <Link to='/login'> <button className="mx-4">Login</button></Link>
+                                }
                             </li>
                         </ul>
 
@@ -41,13 +51,13 @@ const Navbar = () => {
                         <li><Link to='/blog'>Blog</Link></li>
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar ml-56">
                             <div className=" rounded-full">
-                                <img src="../../../../public/245382285_1084955178910889_2518374623584841612_n.jpg" />
+                               {user? <img src={user?.photoURL} />:<></>
+                               }
                             </div>
                         </label>
                         <li className="ml-3 mr-10">
 
-                            {user? <button className="mx-1">LogOut</button>:
-                                <Link to='/login'> <button className="mx-4">Login</button></Link>                           
+                            {user ? <button onClick={handellogoutBtn} className="mx-1">LogOut</button> : <Link to='/login'> <button className="mx-4">Login</button></Link>
                             }
                         </li>
 
