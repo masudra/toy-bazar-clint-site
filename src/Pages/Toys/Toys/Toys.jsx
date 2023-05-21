@@ -5,7 +5,7 @@ import { AuthContex } from '../../Provider/AuthProvider';
 const Toys = ({ alltoys, }) => {
     const { user} = useContext(AuthContex)
 
-    const {_id,Price,ToyName,AvailableQuantity,SubCategory,} =alltoys
+    const {Price,ToyName,AvailableQuantity,SubCategory,} =alltoys
     return (
 
         <tr>
@@ -15,7 +15,7 @@ const Toys = ({ alltoys, }) => {
             <td>{SubCategory}</td>
             <td>{Price}</td>
             <td>{AvailableQuantity}</td>
-            <Link ><button>Veiw</button></Link>
+            <Link to={`/viewdetels/${alltoys?._id}`}><button>Veiw</button></Link>
         </tr>
 
     );
