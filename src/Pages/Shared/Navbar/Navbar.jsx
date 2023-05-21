@@ -7,7 +7,7 @@ const Navbar = () => {
 
     const handellogoutBtn = () => {
         logout()
-            .then(result => { })
+            ?.then(result => { })
             .catch(error => {
                 alert(error.message)
             })

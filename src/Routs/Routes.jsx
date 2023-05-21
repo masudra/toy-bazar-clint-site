@@ -6,6 +6,8 @@ import ErrorPage from "../Pages/ErrorPage/ErrrorPage";
 import Blog from "../Pages/Blog/Blog";
 import Login from "../Pages/Login/Login";
 import Regster from "../Pages/Regster/Regster";
+import Toys from "../Pages/Toys/Toys/Toys";
+import Alltoys from "../Pages/Toys/AllToys/Alltoys";
 
 
   const router = createBrowserRouter([
@@ -16,7 +18,7 @@ import Regster from "../Pages/Regster/Regster";
       children: [
         {
             path: '/',
-            element: <Home></Home>
+            element: <Home></Home>,
         },
         {path: '/login',
         element: <Login></Login>,
@@ -24,7 +26,10 @@ import Regster from "../Pages/Regster/Regster";
         {
           path:'/regster',
           element: <Regster></Regster>,
-
+        },
+        {
+          path:'/alltoys',
+          element: <Alltoys></Alltoys>,
         },
         {
           path:'blog',
