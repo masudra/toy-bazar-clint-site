@@ -28,7 +28,7 @@ const Alltoys = () => {
                     </thead>
                     <tbody>
                         {
-                            allToysData?.map(alltoys => <Toys key={alltoys?._id} alltoys={alltoys} index={alltoys.index}></Toys>)
+                            allToysData?.map((alltoys ,index )=> <Toys key={alltoys?._id} alltoys={alltoys} index={index+1}></Toys>)
                         }
                     </tbody>
 

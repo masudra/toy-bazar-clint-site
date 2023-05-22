@@ -4,12 +4,13 @@ import { AuthContex } from "../../Provider/AuthProvider";
 const Mytoy = () => {
     const { user } = useContext(AuthContex)
     const [alldatas ,setAlldatas] =useState([])
+    console.log(alldatas)
 
    const url =`http://localhost:5000/alltoysdata?email=${user?._id}`;
   useEffect(()=>{
     fetch(url)
     .then(res => res.json())
-    .then(data => setAlldatas)
+    .then(data => setAlldatas(data))
   },[])
 
 

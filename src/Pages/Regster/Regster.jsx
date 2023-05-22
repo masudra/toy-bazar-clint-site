@@ -1,16 +1,16 @@
 import { useContext } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { AuthContex } from "../Provider/AuthProvider";
 
 const Regster = () => {
 
-     const {creatUser,updetuser}= useContext(AuthContex)
-     const navigate = useNavigate();
-     const loction = useLocation()
-     console.log(loction)
-     const from =loction?.state?.from?.pathname || '/'
-     console.log(from)
-  
+    const { creatUser, updetuser } = useContext(AuthContex)
+    const navigate = useNavigate();
+    const loction = useLocation()
+    console.log(loction)
+    const from = loction?.state?.from?.pathname || '/'
+    console.log(from)
+
     const handelRegster = event => {
         event.preventDefault();
         const form = event.target;
@@ -18,26 +18,26 @@ const Regster = () => {
         const photo = form.photo.value;
         const email = form.email.value;
         const password = form.password.value;
-         creatUser(email,password)
-        .then(result =>{
-            navigate(from,{replace: true})
-            updetuser(name,photo)
-            .then(result =>{
-               const logUser = result.user
-               navigate(from,{replace: true})
-               
-           })
-           .catch(error=>{
-               alert(error.message)
-           })
-        })
-        .catch(error=>{
-            alert(error.message)
-        })
+        creatUser(email, password)
+            .then(result => {
+                navigate(from, { replace: true })
+                updetuser(name, photo)
+                    .then(result => {
+                        const logUser = result.user
+                        navigate(from, { replace: true })
 
-       
+                    })
+                    .catch(error => {
+                        alert(error.message)
+                    })
+            })
+            .catch(error => {
+                alert(error.message)
+            })
 
-        
+
+
+
     }
     return (
         <div>
@@ -69,8 +69,6 @@ const Regster = () => {
                                     <input type="email" placeholder="Enter Your Email" name="email" className="input input-bordered" />
 
                                 </div>
-
-
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Password</span>

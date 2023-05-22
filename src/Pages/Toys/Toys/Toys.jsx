@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContex } from '../../Provider/AuthProvider';
 
-const Toys = ({ alltoys, }) => {
+const Toys = ({ alltoys,index }) => {
     const {Price,toyName,Available_quantity,Sub_category,sellerName
     } =alltoys
 
@@ -10,7 +10,7 @@ const Toys = ({ alltoys, }) => {
     return (
 
         <tr>
-            <th>1</th>
+            <th>{index}</th>
             <td>{sellerName}</td>
             <td>{toyName}</td>
             <td>{Sub_category}</td>

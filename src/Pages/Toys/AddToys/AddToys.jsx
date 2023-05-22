@@ -64,14 +64,14 @@ const AddToys = () => {
                             <label className="label">
                                 <span className="label-text">Seller name</span>
                             </label>
-                            <input type="text" defaultValue={user?.displayName} placeholder="seller name" name="sellerName" className="input input-bordered" />
+                            <input type="text" defaultValue={user?.displayName} placeholder="seller name" name="sellerName" disabled className="input input-bordered" />
                         </div>
                         {/*  */}
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Seller email</span>
                             </label>
-                            <input type="email" defaultValue={user?.email} placeholder="seller email" name="sellerEmail" className="input input-bordered" />
+                            <input type="email" defaultValue={user?.email} placeholder="seller email" name="sellerEmail" disabled className="input input-bordered" />
                         </div>
                         {/*  */}
                         {/*  */}
@@ -86,7 +86,7 @@ const AddToys = () => {
                             <label className="label">
                                 <span className="label-text">Price</span>
                             </label>
-                            <input type="text" placeholder="Price" name="Price" className="input input-bordered" />
+                            <input type="number" placeholder="Price" name="Price" className="input input-bordered" />
                         </div>
                         {/*  */}
                         {/*  */}
@@ -94,14 +94,14 @@ const AddToys = () => {
                             <label className="label">
                                 <span className="label-text">Rating</span>
                             </label>
-                            <input type="text" placeholder="Rating" name="Rating" className="input input-bordered" />
+                            <input type="number" placeholder="Rating" name="Rating" className="input input-bordered" />
                         </div>
                         {/*  */}
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Available quantity</span>
                             </label>
-                            <input type="text" placeholder="Available quantity" name="Available_quantity" className="input input-bordered" />
+                            <input type="number" placeholder="Available quantity" name="Available_quantity" className="input input-bordered" />
                         </div>
                         {/*  */}
 
