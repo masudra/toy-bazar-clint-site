@@ -5,7 +5,6 @@ import { AuthContex } from '../../Provider/AuthProvider';
 const Toys = ({ alltoys, }) => {
     const {Price,toyName,Available_quantity,Sub_category,sellerName
     } =alltoys
-    console.log((alltoys));
 
 
     return (

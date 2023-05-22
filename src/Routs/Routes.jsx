@@ -10,6 +10,7 @@ import Alltoys from "../Pages/Toys/AllToys/Alltoys";
 import ViewDetels from "../Pages/Toys/ViewDetels/ViewDetels";
 import AddToys from "../Pages/Toys/AddToys/AddToys";
 import Mytoy from "../Pages/Toys/MyToy/Mytoy";
+import PrivatRoute from "./PrivatRoute";
 
 
   const router = createBrowserRouter([
@@ -35,7 +36,9 @@ import Mytoy from "../Pages/Toys/MyToy/Mytoy";
         },
         {
           path: '/viewdetels/:id',
-          element: <ViewDetels></ViewDetels>,
+          element: <PrivatRoute>
+             <ViewDetels></ViewDetels>
+          </PrivatRoute>,
           loader: ({params})=> fetch(`http://localhost:5000/alltoysdata/${params?.id}`)
 
         },
@@ -45,7 +48,8 @@ import Mytoy from "../Pages/Toys/MyToy/Mytoy";
         },
         {
           path: '/mytoy',
-          element: <Mytoy></Mytoy>
+          element: <Mytoy></Mytoy>,
+          
 
         },
         {

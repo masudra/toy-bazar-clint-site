@@ -1,10 +1,15 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContex } from "../Provider/AuthProvider";
 
 const Regster = () => {
 
      const {creatUser,updetuser}= useContext(AuthContex)
+     const navigate = useNavigate();
+     const loction = useLocation()
+     console.log(loction)
+     const from =loction?.state?.from?.pathname || '/'
+     console.log(from)
   
     const handelRegster = event => {
         event.preventDefault();
@@ -13,16 +18,14 @@ const Regster = () => {
         const photo = form.photo.value;
         const email = form.email.value;
         const password = form.password.value;
-        const user = { name, photo, email, password }
-        console.log(user)
-        
-
-        creatUser(email,password)
+         creatUser(email,password)
         .then(result =>{
+            navigate(from,{replace: true})
             updetuser(name,photo)
             .then(result =>{
                const logUser = result.user
-               console.log(logUser)
+               navigate(from,{replace: true})
+               
            })
            .catch(error=>{
                alert(error.message)
