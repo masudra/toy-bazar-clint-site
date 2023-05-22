@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Toys from '../Toys/Toys';
-import { Link } from 'react-router-dom';
 
 const Alltoys = () => {
     const [allToysData, setAllToysData] = useState([])

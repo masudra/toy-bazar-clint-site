@@ -1,5 +1,9 @@
+import { useContext } from "react";
+import { AuthContex } from "../../Provider/AuthProvider";
 
 const AddToys = () => {
+    const { user } = useContext(AuthContex)
+
     const handelForm = event => {
         event?.preventDefault();
         const form = event?.target;
@@ -15,6 +19,20 @@ const AddToys = () => {
 
         const inputfildData = { photo, toyName, sellerName, sellerEmail, Sub_category, Price, Rating, Available_quantity, Detail_description }
         console?.log(inputfildData);
+
+        fetch('http://localhost:5000/alltoysdata',{
+            method: 'POST',
+            headers: {
+                'content-type':'application/json'
+
+            },
+            body: JSON.stringify(inputfildData),
+
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+        })
     }
 
     return (
@@ -43,14 +61,14 @@ const AddToys = () => {
                             <label className="label">
                                 <span className="label-text">Seller name</span>
                             </label>
-                            <input type="text" placeholder="seller name" name="sellerName" className="input input-bordered" />
+                            <input type="text" defaultValue={user?.displayName} placeholder="seller name" name="sellerName" className="input input-bordered" />
                         </div>
                         {/*  */}
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Seller email</span>
                             </label>
-                            <input type="email" placeholder="seller email" name="sellerEmail" className="input input-bordered" />
+                            <input type="email" defaultValue={user?.email} placeholder="seller email" name="sellerEmail" className="input input-bordered" />
                         </div>
                         {/*  */}
                         {/*  */}

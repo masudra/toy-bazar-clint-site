@@ -25,8 +25,11 @@ const Navbar = () => {
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                             <li><Link to='/'>Home</Link></li>
                             <li><Link to='/alltoys'>All Toys</Link></li>
-                            <li><Link to='/mytoy'>My Toys</Link></li>
-                            <li><Link to='/addtoy'>Add A Toy</Link></li>
+                            {user?
+                                <><li><Link to='/mytoy'>My Toys</Link></li>
+                                <li><Link to='/addtoy'>Add A Toy</Link></li>
+                                </>:<></>
+                            }
                             <li><Link to='/blog'>Blog</Link></li>
                             <img className="w-10 rounded-full" src={user?.photoURL
                             } />
@@ -46,8 +49,11 @@ const Navbar = () => {
 
                         <li><Link to='/'>Home</Link></li>
                         <li><Link to='/alltoys'>All Toys</Link></li>
-                        <li><Link to='/mytoy'>My Toys</Link></li>
-                        <li><Link to='/addtoy'>Add A Toy</Link></li>
+                        {user?
+                                <><li><Link to='/mytoy'>My Toys</Link></li>
+                                <li><Link to='/addtoy'>Add A Toy</Link></li>
+                                </>:<></>
+                            }
                         <li><Link to='/blog'>Blog</Link></li>
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar ml-56">
                             <div className=" rounded-full">
