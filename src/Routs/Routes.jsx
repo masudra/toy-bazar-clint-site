@@ -8,6 +8,8 @@ import Login from "../Pages/Login/Login";
 import Regster from "../Pages/Regster/Regster";
 import Alltoys from "../Pages/Toys/AllToys/Alltoys";
 import ViewDetels from "../Pages/Toys/ViewDetels/ViewDetels";
+import AddToys from "../Pages/Toys/AddToys/AddToys";
+import Mytoy from "../Pages/Toys/MyToy/Mytoy";
 
 
   const router = createBrowserRouter([
@@ -35,6 +37,15 @@ import ViewDetels from "../Pages/Toys/ViewDetels/ViewDetels";
           path: '/viewdetels/:id',
           element: <ViewDetels></ViewDetels>,
           loader: ({params})=> fetch(`http://localhost:5000/alltoysdata/${params?.id}`)
+
+        },
+        {
+          path:'/addtoy',
+          element: <AddToys></AddToys>,
+        },
+        {
+          path: '/mytoy',
+          element: <Mytoy></Mytoy>
 
         },
         {
