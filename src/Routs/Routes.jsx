@@ -44,13 +44,16 @@ import PrivatRoute from "./PrivatRoute";
         },
         {
           path:'/addtoy',
-          element: <AddToys></AddToys>,
+          element: <PrivatRoute>
+            <AddToys></AddToys>
+          </PrivatRoute>,
         },
         {
           path: '/mytoy',
-          element: <Mytoy></Mytoy>,
+          element: <PrivatRoute>
+            <Mytoy></Mytoy>
+          </PrivatRoute>,
           
-
         },
         {
           path:'blog',
