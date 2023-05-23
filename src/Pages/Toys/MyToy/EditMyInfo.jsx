@@ -6,7 +6,7 @@ const EditMyInfo = () => {
     // console.log(data)
     return (
      <div>
-        
+    
      </div>
     );
 };

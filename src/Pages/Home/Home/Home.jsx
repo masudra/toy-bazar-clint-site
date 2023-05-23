@@ -3,6 +3,7 @@ import Gallery from "../../Gallery/Gallery";
 import Banner from "../Banner/banner";
 import Alltoys from "../../Toys/AllToys/Alltoys";
 import UpComingToys from "../../../ExtaSec/UpComingToys";
+import TopSeler from "../../../ExtaSec/TopSeler";
 
 const Home = () => {
 
@@ -13,6 +14,7 @@ const Home = () => {
             <Banner></Banner>
             <Gallery></Gallery>
             <UpComingToys></UpComingToys>
+            <TopSeler></TopSeler>
 
            
         </div>
