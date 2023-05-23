@@ -9,8 +9,8 @@ const TopSeler = () => {
       <div className=' mt-10 border'>
       <h1 className='text-center font-bold text-4xl '>Our Top Seller </h1>
 
-        <div className='grid lg:grid-cols-4 lg:ml-20 gap-10 mt-10  mb-10  '>
-          <div className="card w-[300px] h-[360px] bg-base-100 shadow-xl">
+        <div className='grid lg:grid-cols-4 lg:mx-auto gap-5 mt-10  mb-10  '>
+          <div className="card w-[290px] h-[360px] bg-base-100 shadow-xl">
               <figure><img src={logo1} alt="Shoes" /></figure>
               <div className="card-body">
                   <h2 className="card-title"><span className='font-bold'>Name :</span>Maruf </h2>
@@ -20,7 +20,7 @@ const TopSeler = () => {
                   
               </div>
           </div>
-          <div className="card w-[300px] h-[360px] bg-base-100 shadow-xl">
+          <div className="card w-[290px] h-[360px] bg-base-100 shadow-xl">
               <figure><img src={logo2} alt="Shoes" /></figure>
               <div className="card-body">
               <h2 className="card-title"><span className='font-bold'>Name :</span>Rosan</h2>
@@ -31,7 +31,7 @@ const TopSeler = () => {
 
               </div>
           </div>
-          <div className="card w-[300px] h-[360px] bg-base-100 shadow-xl">
+          <div className="card w-[290px] h-[360px] bg-base-100 shadow-xl">
               <figure><img src={logo3} alt="Shoes" /></figure>
               <div className="card-body">
               <h2 className="card-title"><span className='font-bold'>Name :</span>Jubayer </h2>
@@ -41,7 +41,7 @@ const TopSeler = () => {
 
               </div>
           </div>
-          <div className="card w-[300px] h-[360px] bg-base-100 shadow-xl">
+          <div className="card w-[290px] h-[360px] bg-base-100 shadow-xl">
               <figure><img src={logo4} alt="Shoes" /></figure>
               <div className="card-body">
               <h2 className="card-title"><span className='font-bold'>Name :</span>Abed</h2>

@@ -1,13 +1,11 @@
 import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContex } from "../../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const EditMyInfo = () => {
     const data  =useLoaderData();
     const { _id, Price,  Available_quantity } =data
-    console.log(data)
-
-
 
     
     const update = event => {
@@ -32,6 +30,13 @@ const EditMyInfo = () => {
         .then(res => res.json())
         .then(data => {
             console.log(data)
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: ' Edit Successful Your Data',
+                showConfirmButton: false,
+                timer: 1500
+            })
            
         })
     }

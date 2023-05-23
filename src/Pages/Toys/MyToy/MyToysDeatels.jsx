@@ -3,13 +3,15 @@ import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const MyToysDeatels = ({ toysdata, index, handlelDelete }) => {
-    const { _id, Price, sellerName, toyName, Sub_category, Available_quantity } = toysdata
+    const { photo,_id, Price, sellerName, toyName, Sub_category, Available_quantity } = toysdata
+    console.log(toysdata)
 
    
 
     return (
         <tr>
             <th>{index}</th>
+            <th><img className='w-20 h-20 rounded' src={photo} alt="" /></th>
             <td>{sellerName}</td>
             <td>{toyName}</td>
             <td>{Sub_category}</td>

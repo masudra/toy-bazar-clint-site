@@ -18,6 +18,7 @@ const Alltoys = () => {
                     <thead>
                         <tr>
                             <th>Number</th>
+                            <th>Photo</th>
                             <th>Seller Name</th>
                             <th>Toy Name</th>
                             <th>Sub-category</th>
