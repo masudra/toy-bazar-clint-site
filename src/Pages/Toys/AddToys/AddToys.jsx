@@ -32,8 +32,8 @@ const AddToys = () => {
         .then(res => res.json())
         .then(data => {
             console.log(data)
-            if(data?.insertedId){
-                alert('usercreted succssfuly')
+            if(data?.insertedId >0){
+                alert(' succssfuly')
             }
         })
     }

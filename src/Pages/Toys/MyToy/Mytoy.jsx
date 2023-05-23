@@ -5,7 +5,6 @@ import MyToysDeatels from "./MyToysDeatels";
 const Mytoy = () => {
     const { user } = useContext(AuthContex)
     const [mytoy, settoy] = useState([])
-    console.log(mytoy)
 
 
     const url = `http://localhost:5000/alltoysdatas?email=${user?.email}`;
