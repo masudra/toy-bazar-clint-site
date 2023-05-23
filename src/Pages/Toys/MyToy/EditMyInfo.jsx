@@ -20,7 +20,7 @@ const EditMyInfo = () => {
 
         const inputfildData = {  Price, Available_quantity, Detail_description }
 
-        fetch(`http://localhost:5000/alltoysdatas${_id}`,{
+        fetch(`https://toy-bazar-server-site.vercel.app/alltoysdatas${_id}`,{
             method: 'PUT',
             headers: {
                 'content-type':'application/json'

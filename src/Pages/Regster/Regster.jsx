@@ -28,18 +28,18 @@ const Regster = () => {
                     title: 'Your Acount  has been Creatd',
                     showConfirmButton: false,
                     timer: 1500
-                  })
+                })
                 updetuser(name, photo)
                     .then(result => {
                         const logUser = result.user
                         navigate(from, { replace: true })
-                        
+
 
                     })
                     .catch(error => {
                         alert(error.message)
                     })
-                 
+
             })
             .catch(error => {
                 alert(error.message)

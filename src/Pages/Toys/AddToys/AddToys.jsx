@@ -21,7 +21,7 @@ const AddToys = () => {
         const inputfildData = { photo, toyName, sellerName, sellerEmail, Sub_category, Price, Rating, Available_quantity, Detail_description }
         console?.log(inputfildData);
 
-        fetch('http://localhost:5000/alltoysdata',{
+        fetch('https://toy-bazar-server-site.vercel.app/alltoysdata',{
             method: 'POST',
             headers: {
                 'content-type':'application/json'

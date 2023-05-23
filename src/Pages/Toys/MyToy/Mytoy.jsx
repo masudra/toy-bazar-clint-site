@@ -7,7 +7,7 @@ const Mytoy = () => {
     const { user } = useContext(AuthContex)
     const [mytoy, settoy] = useState([])
 
-    const url = `http://localhost:5000/alltoysdatas?email=${user?.email}`;
+    const url = `https://toy-bazar-server-site.vercel.app/alltoysdatas?email=${user?.email}`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -33,7 +33,7 @@ const Mytoy = () => {
                 )
             }
         })
-        fetch(`http://localhost:5000/alltoysdatas/${id}`, {
+        fetch(`https://toy-bazar-server-site.vercel.app/alltoysdatas/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

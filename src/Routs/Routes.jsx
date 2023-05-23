@@ -42,7 +42,7 @@ const router = createBrowserRouter([
         element: <PrivatRoute>
           <ViewDetels></ViewDetels>
         </PrivatRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/alltoysdata/${params?.id}`)
+        loader: ({ params }) => fetch(`https://toy-bazar-server-site.vercel.app/alltoysdata/${params?.id}`)
 
       },
       {
@@ -61,7 +61,7 @@ const router = createBrowserRouter([
       {
         path: '/edit/:id',
         element: <EditMyInfo></EditMyInfo>,
-        loader: ({ params }) => fetch(`http://localhost:5000/alltoysdata/${params?.id}`)
+        loader: ({ params }) => fetch(`https://toy-bazar-server-site.vercel.app/alltoysdata/${params?.id}`)
 
 
       },
