@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { FaGoogle,} from 'react-icons/fa';
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import { app } from "../Firebase/firebase.config";
+import Swal from "sweetalert2";
 
 
 const Login = () => {
@@ -20,9 +21,18 @@ const Login = () => {
 
     const handelgooglBtn= ()=>{
         signInWithPopup(auth, googleProvider)
+      
+        
         .then(result => {
           const loginGoogle =result.user
           navigate(from,{replace: true})
+          Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Your Acount  has been Creatd',
+            showConfirmButton: false,
+            timer: 1500
+          })
     
         })
         .catch(error =>{

@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { AuthContex } from "../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const Regster = () => {
 
@@ -21,15 +22,24 @@ const Regster = () => {
         creatUser(email, password)
             .then(result => {
                 navigate(from, { replace: true })
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Your Acount  has been Creatd',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
                 updetuser(name, photo)
                     .then(result => {
                         const logUser = result.user
                         navigate(from, { replace: true })
+                        
 
                     })
                     .catch(error => {
                         alert(error.message)
                     })
+                 
             })
             .catch(error => {
                 alert(error.message)
