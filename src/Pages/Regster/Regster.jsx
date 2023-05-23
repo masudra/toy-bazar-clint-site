@@ -30,8 +30,8 @@ const Regster = () => {
                     timer: 1500
                 })
                 updetuser(name, photo)
-                    .then(result => {
-                        const logUser = result.user
+                    .then(() => {
+                        // const logUser = result.user
                         navigate(from, { replace: true })
 
 

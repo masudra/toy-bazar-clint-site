@@ -21,8 +21,7 @@ const Login = () => {
 
     const handelgooglBtn= ()=>{
         signInWithPopup(auth, googleProvider)
-      
-        
+    
         .then(result => {
           const loginGoogle =result.user
           navigate(from,{replace: true})
@@ -80,7 +79,10 @@ const Login = () => {
           <input type="password" placeholder="Enter Your Password" name="password" className="input input-bordered" />
           <label className="label">
            
-           <p> <span>You don,t have an account </span> <Link className="link-hover ml-10 text-xl text-blue-500" to='/regster'> Regster </Link></p> 
+          {/* <Link to="new-path" state={{ some: "value" }} /> */}
+
+
+           <p> <span>You don,t have an account </span> <Link className="link-hover ml-10 text-xl text-blue-500" to='/regster' state={loction?.state}> Regster </Link></p> 
           </label>
           
         </div>
